@@ -1,0 +1,175 @@
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #222;
+  color: #a57e356f;
+}
+
+#board {
+  display: grid;
+  grid-template-columns: 100px 100px 100px;
+  grid-template-rows: 100px 100px 100px;
+  cursor: pointer;
+  position: relative;
+}
+
+.tile {
+  color: currentColor;
+  margin: 2px;
+  border-radius: 10px;
+  font-size: 3em;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.right-border {
+  border-right: 0.2em solid currentColor;
+}
+
+.bottom-border {
+  border-bottom: 0.2em solid currentColor;
+}
+
+.strike {
+  position: absolute;
+  background-color: rgba(238, 0, 52, 0.4);
+}
+
+.strike-row-1 {
+  width: 100%;
+  height: 1em;
+  top: 13%;
+}
+
+.strike-row-2 {
+  width: 100%;
+  height: 1em;
+  top: 47%;
+}
+
+.strike-row-3 {
+  width: 100%;
+  height: 1em;
+  top: 80%;
+}
+
+.strike-column-1 {
+  height: 100%;
+  width: 1em;
+  left: 12.5%;
+}
+
+.strike-column-2 {
+  height: 100%;
+  width: 1em;
+  left: 46%;
+}
+
+.strike-column-3 {
+  height: 100%;
+  width: 1em;
+  left: 79%;
+}
+
+.strike-diagonal-1 {
+  width: 90%;
+  height: 1.5em;
+  top: 47%;
+  left: 5%;
+  transform: skewY(45deg);
+}
+
+.strike-diagonal-2 {
+  width: 90%;
+  height: 1.5em;
+  top: 44%;
+  left: 5%;
+  transform: skewY(135deg);
+}
+
+h1 {
+  color: #bbb;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+h2 {
+  color: #bbb;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+h3 {
+  color: #a78b596f;
+  font-family: Arial, Helvetica, sans-serif, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-weight: 200;
+  text-transform:uppercase;
+  letter-spacing: 0.7em;
+  margin: 10% 0 0
+}
+
+#first {
+  width: 60%;
+  font-size: 1.2em;
+  text-align: center;
+  margin: 0;
+  color: #a78b596f;
+}
+
+
+#game-over-area, 
+#newPlayersArea {
+  background-color: #22222283;
+  background-image: url("./Images/img1.png");
+  background-position: center;
+  text-align: center;
+  border:8px solid currentColor;
+  border-radius: 30px 0;
+  padding: 50px;
+  width: 50%;
+  margin-top: 7vh;
+}
+
+input {
+  margin: 0 0.5em 0.5em 0;
+  padding: 0.8em 1em;
+  border-radius: 10px 0;
+  border: #a57e3592 2px solid;
+}
+
+button {
+  background-color: rgba(238, 0, 52, 0.1);
+  color: #bbb;
+  border: currentColor 2px solid;
+  border-radius: 10px 0;
+  padding: 0.6em 2.4em;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: 1em;
+  transition-duration: 1s;
+  cursor: pointer;
+}
+
+button:hover {
+background-color: rgba(238, 0, 52, 0.3);
+border-radius: 0 10px;
+}
+
+.hidden {
+  display: none;
+}
+
+.visible {
+  display: block;
+}
+
+.x-hover:hover::after {
+  content: "X";
+  opacity: 0.3;
+}
+
+.o-hover:hover::after {
+  content: "O";
+  opacity: 0.3;
+}
+
